@@ -1,0 +1,39 @@
+*{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+a{
+  text-decoration:none;
+}
+img{
+  max-width: 100%;
+}
+ul,ol{
+  list-style: none;
+}
+.App .menu{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.App .menu li{
+  display: inline-block;
+  width: 33.33%;
+}
+.App .menu li a{
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  line-height: 40px;
+  color: #ffffff;
+  background: #1a1a1a;
+}
+.App .menu li a.active{
+  color: #1a1a1a;
+  background: #ffffff;
+}
