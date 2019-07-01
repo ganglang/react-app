@@ -7,6 +7,17 @@ export const setTypes=(val)=>{
     }
 }
 
+export const setSlider=()=>dispatch=>{
+    console.log("轮播图请求");
+    getSlider().then(res=>{
+        dispatch({
+            type:types.SET_SLIDERS,
+            sliderList:res.list
+        })
+        console.log("轮播图："+res.list);
+    })
+}
+
 export const setNews=type=>dispatch=>{
     getNews(type).then(res=>{
         console.log("新闻数据:"+JSON.stringify(res));
@@ -19,11 +30,3 @@ export const setNews=type=>dispatch=>{
     })
 }
 
-export const setSlider=()=>dispatch=>{
-    getSlider().then(res=>{
-        dispatch({
-            type:types.SET_SLIDERS,
-            res:res
-        })
-    })
-}

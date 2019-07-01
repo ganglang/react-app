@@ -1,7 +1,9 @@
 import React,{Component} from 'react';
-import HomeHeader from '../../components/Home/HomeHeader';
 import * as actions from '../../actions/home';
 import {connect} from "react-redux";
+import './index.css';
+import HomeHeader from '../../components/Home/HomeHeader';
+import ReactSlider from '../../components/Home/Slider';
 class Home extends Component{
     constructor(props){
         super(props);
@@ -17,6 +19,9 @@ class Home extends Component{
         return(
             <div>
                 <HomeHeader chooseType={this.chooseType}/>
+                <div className="content-wrap">
+                    <ReactSlider sliders={this.props.home.slidersList}/>
+                </div>
             </div>
         )
     }

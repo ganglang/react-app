@@ -31,5 +31,13 @@
 ```$xslt
 const server=require("../src/servier/servicer");
 ```
+##### 问题三：
+后台报错：
+Access to fetch at 'http://localhost:8080/slider' from origin 'http://localhost:3000' has been blocked by CORS policy: The value of the 'Access-Control-Allow-Origin' header in the response must not be the wildcard '*' when the request's credentials mode is 'include'.
+解决方法：
+fetch的get请求（/src/servier/fetchApi.js文件里)去掉总是给请求发送cookie的设置，即去掉"credentials:'include'".
+
+####  react-swipe :https://github.com/voronianski/react-swipe
+
 
 

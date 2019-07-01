@@ -2,7 +2,7 @@ import 'whatwg-fetch';
 export const get=(url)=>{
     return fetch(url,{
         method:"get",
-        credentials:'include',
+        //credentials:'include', //去掉这句，不然请求数据会报错
         headers:{
             "Accept":"application/json"
         },
